@@ -8,6 +8,7 @@ export default defineConfig({
   workers: process.env.CI ? 1 : undefined,
   reporter: [['html'], ['allure-playwright', { outputFolder: 'allure-results' }]],
   use: {
+    baseURL: 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login',
     trace: 'on-first-retry',
     screenshot: 'on',
     video: 'on-first-retry',
