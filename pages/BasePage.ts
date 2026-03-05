@@ -1,4 +1,5 @@
 import { Page } from '@playwright/test';
+import Logger from '../utils/Logger';
 
 /**
  * BasePage class that provides common functionality and properties for all page objects.
@@ -16,6 +17,7 @@ export class BasePage {
      * @param url - The URL to navigate to.
      */
     async goto(url: string) {
+        Logger.info(`Navigating to: ${url}`);
         await this.page.goto(url);
     }
 
@@ -25,6 +27,7 @@ export class BasePage {
      * @param ms - The time to wait in milliseconds.
      */
     async wait(ms: number) {
+        Logger.info(`Waiting for ${ms} ms`);
         await this.page.waitForTimeout(ms);
     }
 
@@ -33,6 +36,8 @@ export class BasePage {
      * @returns A promise that resolves to the page title.
      */
     async getTitle(): Promise<string> {
-        return await this.page.title();
+        const title = await this.page.title();
+        Logger.info(`Page title: ${title}`);
+        return title;
     }
 }

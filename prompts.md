@@ -15,5 +15,9 @@ The initial commit you've done through is with webheadh, I want that commit to b
 2. Login with credentials (Admin / admin123).
 3. Create PageObjects for the login page following best practices.
 4. Add assertions to verify successful login.
-5. Generate an Allure report.
-6. Maintain a `prompts.md` file in the repo to track prompt history (excluding sensitive info).
+### Request 6
+1. Remove support for WebKit browser.
+2. Maintain interaction history in `prompts.md`.
+3. Maintain best practices.
+4. Fix Git author name to "aljozy".
+5. Commit and push to a remote branch named `playwright-orange`.
